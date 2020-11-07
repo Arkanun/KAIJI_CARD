@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import classes from './Layout.module.scss';
-import Footer from '../Footer/Footer';
+import Popup from '../Popup/Popup';
 import {withRouter} from 'react-router-dom'
 
 class Layout extends Component {
@@ -8,7 +8,6 @@ class Layout extends Component {
         return (
             <div className={classes.background}>
                 {this.props.children}
-                <Footer shouldShow = {this.props.history.location.pathname === '/game' ? false : true}/>
             </div>
         )
     }
